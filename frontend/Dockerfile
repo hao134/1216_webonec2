@@ -5,13 +5,13 @@ FROM node:18-alpine AS build
 WORKDIR /app
 
 # 複製 package.json 和 package-lock.json
-COPY package*.json ./
+COPY frontend/package*.json ./
 
 # 安裝依賴
 RUN npm install
 
 # 複製應用程式code
-COPY . .
+COPY frontend/. .
 
 # 執行建構
 RUN npm run build

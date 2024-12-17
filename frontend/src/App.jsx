@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 
 const App = () => {
   const [message, setMessage] = useState("");
-  //const apiUrl = "http://localhost:5000/api/hello"
   const apiUrl = import.meta.env.VITE_API_URL;
   console.log(apiUrl);
   useEffect(() => {

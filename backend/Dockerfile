@@ -5,13 +5,13 @@ FROM node:18-alpine
 WORKDIR /app
 
 # 複製 package.json 和 package-lock.json
-COPY backend/package*.json ./
+COPY ./package*.json ./
 
 # 安裝依賴
 RUN npm install
 
 # 複製應用程式code
-COPY backend/ .
+COPY . .
 
 # expose port
 EXPOSE 5000
